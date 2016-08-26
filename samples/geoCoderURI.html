@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+	var geocoder = new google.maps.Geocoder();
+	document.write("sample of geocoder");
+
+	var lat = '';
+    var lng = '';
+    var address = "12345";
+    geocoder.geocode( { 'address': address}, function(results, status) 
+	{
+		if (status == google.maps.GeocoderStatus.OK) {
+			alert("status: " + status);
+			lat = results[0].geometry.location.lat();
+			lng = results[0].geometry.location.lng();
+			alert('Latitude: ' + lat + ' Logitude: ' + lng);
+		} else {
+			alert("Geocode was not successful for the following reason: " + status);
+		}
+	});
+</script>
+
+</body>
+</html>
