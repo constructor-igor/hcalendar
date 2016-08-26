@@ -1,5 +1,7 @@
+1.0.7.0
+	- "Geo" service switched to google API.
 1.0.6.7
-	- Add Kharkiv (50.0045° N, 36.2314° E)
+	- Add Kharkiv (50.0045ï¿½ N, 36.2314ï¿½ E)
 1.0.6.6
 	- Workaround for bug (FF crash,  https://bugzilla.mozilla.org/show_bug.cgi?id=952110)
 1.0.6.5
@@ -94,9 +96,9 @@
 1.0.4.91
 	- Support Postbox 1.1.*
 1.0.4.90
-	- Added Tallin (http://www.timeanddate.com/worldclock/city.html?n=242); (Latitude: 59° 22' North, Longitude: 24° 48' East)
+	- Added Tallin (http://www.timeanddate.com/worldclock/city.html?n=242); (Latitude: 59ï¿½ 22' North, Longitude: 24ï¿½ 48' East)
 1.0.4.89
-	- Added Riga (http://www.timeanddate.com/worldclock/city.html?n=602); (Latitude: 56° 53' North, Longitude: 24° 05' East)
+	- Added Riga (http://www.timeanddate.com/worldclock/city.html?n=602); (Latitude: 56ï¿½ 53' North, Longitude: 24ï¿½ 05' East)
 1.0.4.88
 	- Support Mozilla Firefox 3.6
 	- Support Thunderbird 3.0
@@ -182,7 +184,7 @@
 	- Issue 38: Add Kfar Saba
           (http://code.google.com/p/hcalendar/issues/detail?id=38) 
 1.0.4.63
-	- Issue 33: ½ hour increments in GMT (Australia)
+	- Issue 33: ï¿½ hour increments in GMT (Australia)
 	  (http://code.google.com/p/hcalendar/issues/detail?id=33)
 1.0.4.62
 	- Issue 34: A problem in Parsha switching.

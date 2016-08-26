@@ -33,7 +33,8 @@ function loadXMLDoc(url) {
 				req.open("GET", url, true);
 				req.send();
 			}
-		}
+		}
+
 	}
 	return 0;
 }
@@ -81,10 +82,59 @@ function processReqChange()
 	}
 }
 
-function showCoordinates(serviceId, zipCode, resultRequest) {
-	resultRequestHandler = resultRequest;
-	var authenticationHeader = serviceId;
-	var url ="http://codebump.com/services/zipcodelookup.asmx/GetZipCodeCoordinates?AuthenticationHeader=" + authenticationHeader + "&zip=" + zipCode;
-	loadXMLDoc(url);
+function showCoordinates_google(zipCode, resultRequest) {
+	alert("showCoordinates_google");
+	var address = zipCode;
+	alert("showCoordinates_google, address:" + address);
+	try
+	{
+ 		var geocoder = new google.maps.Geocoder();
+		alert("showCoordinates_google, created geoCoder");
+    	geocoder.geocode( { 'address': address}, function(results, status) 	{ alert("geoCode result");	});
+		alert("showCoordinates_google, called geocoder.geocode");
+	}
+	catch(e)
+	{
+		alert(e);
+	}
 	return 0;
+}
+
+function showCoordinates_googleAPI(zipCode, resultRequest) {
+	var address = zipCode;
+	var url = "http://maps.googleapis.com/maps/api/geocode/json?address=" + address;
+	var req = new XMLHttpRequest();
+	req.onreadystatechange = function() {
+		if (req.readyState == 4 && req.status == 200)
+		{
+			try
+			{
+				var responseText = JSON.parse(req.responseText);
+				var location = responseText.results[0].geometry.location;
+				var lat = location.lat;
+				var lng = location.lng;
+				if (resultRequest != null)
+					resultRequest(0, lat, lng, lat, lng);
+			}
+			catch(e)
+			{
+				alert(e);
+				if (resultRequest != null)
+					resultRequest(-2, 0, 0, 0, 0);
+			}
+		}
+	}
+	req.open("GET", url, true);
+	req.send(null);
+	return 0;
+}
+
+function showCoordinates(serviceId, zipCode, resultRequest) {
+	return showCoordinates_googleAPI(zipCode, resultRequest);
+
+	//resultRequestHandler = resultRequest;
+	//var authenticationHeader = serviceId;
+	//var url ="http://codebump.com/services/zipcodelookup.asmx/GetZipCodeCoordinates?AuthenticationHeader=" + authenticationHeader + "&zip=" + zipCode;
+	//loadXMLDoc(url);
+	//return 0;
 }
