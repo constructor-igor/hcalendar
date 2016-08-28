@@ -1080,7 +1080,7 @@ HCalendarChrome.HCalendar =
 		this.enabledHint = false;
 		try
 		{
-			window.hcalendarDialog = window.openDialog(
+			var hcalendarDialog = window.openDialog(
 				"chrome://hcalendar/content/options.xul", 
 				"_blank",
 				"chrome,modal,centerscreen,resizable=no,dependent=yes");
