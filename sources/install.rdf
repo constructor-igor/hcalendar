@@ -21,6 +21,7 @@
 	<em:optionsURL>chrome://hcalendar/content/options.xul</em:optionsURL>
 	<em:aboutURL></em:aboutURL>
 	<em:unpack>true</em:unpack>
+	<em:multiprocessCompatible>true</em:multiprocessCompatible>
 	
 	<!-- Mozilla Firefox -->	
 	<em:targetApplication>

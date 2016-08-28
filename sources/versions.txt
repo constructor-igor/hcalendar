@@ -1,4 +1,6 @@
-1.0.7.0
+1.0.7.1 (26-Aug-2016)
+	- Mark "Hebrew Calendar" extension as compatible with Multi Process
+1.0.7.0 (26-Aug-2016)
 	- "Geo" service switched to google API.
 1.0.6.7
 	- Add Kharkiv (50.0045� N, 36.2314� E)

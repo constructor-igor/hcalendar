@@ -1,0 +1,5 @@
+JWT issuer: user:6634:84
+JWT secret: dc6ab57b4ae4f32b0ce0367d8cc1e2fe3fac4a1a43d970b471b93c11a2e1ff3c
+
+"https://addons.mozilla.org/api/v3/accounts/profile/" \
+     -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE0NDcyNzMwOTZ9.MG9LJiEK5_Db8WpF5cWWRebXCtUB48EJzxKIBqQhSOo"
