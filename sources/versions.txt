@@ -1,4 +1,6 @@
-1.0.7.1 (26-Aug-2016)
+1.0.7.2 (29-Aug-2016)
+	- #119 Security Tests validation warnings
+1.0.7.1 (29-Aug-2016)
 	- Mark "Hebrew Calendar" extension as compatible with Multi Process
 1.0.7.0 (26-Aug-2016)
 	- "Geo" service switched to google API.
