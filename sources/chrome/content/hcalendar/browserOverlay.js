@@ -1096,7 +1096,7 @@ HCalendarChrome.HCalendar =
 		this.enabledHint = false;
 		try
 		{
-			window.hcalendarDialog = window.openDialog(
+			var hcalendarDialog = window.openDialog(
 				"chrome://hcalendar/content/converter.xul", 
 				"_blank",
 				"chrome,modal,centerscreen,resizable=no,dependent=yes");
@@ -1112,11 +1112,10 @@ HCalendarChrome.HCalendar =
 		this.enabledHint = false;
 		try
 		{
-			window.hcalendarDialog = window.openDialog(
+			var hcalendarDialog = window.openDialog(
 				"chrome://hcalendar/content/gematriya.xul", 
 				"_blank",
 				"chrome,modal,centerscreen,resizable=no,dependent=yes");
-
 		}
 		catch(ex)  { alert("openUrl(): exception <" + ex + ">\n"); }
 		this.enabledHint = true;
